@@ -1,0 +1,12 @@
+ {
+
+    "isFetching": true,
+    "user": {
+        "id": 0,
+        "firstName": "SomeFirstName",
+        "lastName": "SomeLastName",
+        "email": "some@email.com",
+        "age": 18
+    },
+    "messages": []
+}

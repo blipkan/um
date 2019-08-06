@@ -1,0 +1,474 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    max-width: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Controls */
+
+.btn {
+    white-space: nowrap;
+    display: inline-block;
+
+    color: white;
+    background-image: linear-gradient(#4f93ce, #285f8f);
+    border: 1px solid #285f8f;
+    border-radius: 3px;
+    padding: 5px 7px;
+    margin: 1px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(rgb(99, 160, 212), rgb(51, 122, 183));
+}
+
+/* ToolBar */
+
+/* UserList  */
+.user-list {
+    border: 1px solid #ddd;
+}
+
+.user-list.loading * {
+    color: gray;
+}
+
+.user-list.loading .btn {
+    background-image: linear-gradient(#ccc, #999);
+    border: 1px solid #ccc;
+}
+
+.user-list-splash {
+    float: right;
+    margin: 2px 5px 0 0;
+
+}
+
+.user-list-splash > i {
+    color: #285f8f;
+    /* font-size: 4em; */
+    font-size: 28px;
+    z-index: 2000;
+}
+
+.user-list-overlay {
+    background: repeat scroll #AAA;
+    opacity: 0.9;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    border: 1px solid #ddd;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+table > thead > tr > th, table > thead > tr > td {
+    border-collapse: collapse;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+tbody {
+    vertical-align: middle;
+    border-color: inherit;
+
+}
+
+table > tbody > tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+table > tbody > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.colheader {
+    cursor: pointer;
+    padding-right: 3px;
+    color: #285f8f;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.colheader:hover {
+    color: #4f93ce;
+}
+
+.colheader.asc::before {
+    content: "\f0d8";
+    padding-right: 3px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.colheader.desc::before {
+    content: "\f0d7";
+    padding-right: 3px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-size: 14px;
+}
+
+.userrow.userrow-act {
+    background-color: rgb(175, 248, 248);
+}
+
+/* UserForm */
+form {
+    text-align: left;
+    font-size: 16px;
+}
+
+form > div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 10px 5px;
+}
+
+form > div > label {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 150px;
+    text-align: right;
+    padding: 6px 9px;
+}
+
+form > div > div {
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 500px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+form > div > div > * {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 16px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+}
+
+input, textarea, button, select {
+    outline: none;
+}
+
+form > div > div > span {
+    border: none;
+    font-weight: bold;
+    color: #700;
+}
+
+form > div > div > span.error {
+    color: #700;
+}
+
+form > div > div > span.warning {
+    color: saddlebrown;
+}
+
+form > div > div > span:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\F06A';
+    margin-right: 5px;
+}
+
+form > div button {
+    margin: 10px;
+}
+
+form button {
+    cursor: pointer;
+}
+
+form > div button[type='submit'] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    background-image: linear-gradient(#4f93ce, #285f8f);
+    border: 1px solid #285f8f;
+}
+
+form > div button[type="submit"]:hover {
+    background-image: linear-gradient(rgb(99, 160, 212), rgb(51, 122, 183));
+}
+
+form > div button[type="submit"]::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "";
+    margin-right: 5px;
+    font: normal normal normal normal normal 1px FontAwesome;
+}
+
+form > div button[type='button'] {
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-image: linear-gradient(white, #d5d5d5);
+    border: 1px solid #d5d5d5;
+    color: black;
+}
+
+form > div button[type="button"]:hover {
+    background-image: linear-gradient(white, rgb(238, 238, 238));
+}
+
+form > div button[type="button"][disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+form > div button[type="button"]:hover[disabled] {
+    background-image: linear-gradient(white, rgb(213, 213, 213));
+}
+
+/* tool bar */
+.toolbar {
+    float: left;
+}
+
+.btn-toolbar {
+}
+
+/* Lang bar */
+.lang-bar {
+    float: right;
+    margin: 0 0 10px 0;
+}
+
+.lang-btn {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.lang-control {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.lang-list {
+    display: none;
+    position: absolute;
+    background-color: #4f93ce;
+    min-width: 90px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 3px;
+    right: 0;
+    top: 0;
+}
+
+/* Links inside the dropdown */
+.lang-list span {
+    padding: 10px 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inherit;
+}
+
+.lang-list span img {
+    float: right;
+}
+
+/* Change color of dropdown links on hover */
+.lang-list span:hover {
+    background-color: #285f8f;
+    font-weight: bolder;
+}
+
+/* Show the dropdown menu on hover */
+.lang-control:hover .lang-list {
+    display: block;
+}
+
+/* Search bar */
+.searchbar {
+    float: right;
+    margin: 0 0 10px 0;
+}
+
+.inp-search {
+    font-size: 16px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    width: 400px;
+    margin-right: 4px;
+    border-radius: 5px;
+}
+
+/* ??? */
+.inp-search:not(:valid) ~ .btn-search-clear {
+    display: none;
+}
+
+.btn-search-submit {
+    display: inline;
+}
+
+.btn-search-clear {
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+    margin: 0 4px 0 -28px;
+    color: #285f8f;
+}
+
+.btn-search-clear.empty {
+    display: none;
+}
+
+.btn-add {
+    padding: 5px 20px;
+}
+
+.usercard {
+
+}
+
+.usercard .usercard-head {
+    overflow: hidden
+}
+
+.usercard-head-left {
+    float: left;
+
+}
+
+.usercard-head-left h2 {
+    color: #285f8f;
+    font-size: 24px;
+}
+
+.usercard-head-right {
+    float: right;
+}
+
+.btn-usercard-close {
+    float: right;
+}
+
+/* ModalDlg */
+.dlg-modal .modal-header {
+}
+
+.dlg-modal .modal-body:empty {
+    display: none;
+}
+
+.dlg-modal .modal-title {
+    font-weight: bold;
+}
+
+.dlg-modal.ok .modal-title {
+    color: darkgreen;
+}
+
+.dlg-modal.err .modal-title {
+    color: #700;
+}
+
+.dlg-modal.confirm .modal-title {
+    color: saddlebrown;
+}

@@ -1,0 +1,220 @@
+{
+  "user": {
+    "firstName": [
+      "First Name",
+      "Имя"
+    ],
+    "lastName": [
+      "Last Name",
+      "Фамилия"
+    ],
+    "email": [
+      "e-mail",
+      "e-mail"
+    ],
+    "age": [
+      "age",
+      "Возраст"
+    ],
+    "id": [
+      "id",
+      "id"
+    ]
+  },
+  "valid": {
+    "required": [
+      "Required",
+      "Обязательное поле"
+    ],
+    "maxLength": [
+      "Must be ${num} characters or less",
+      "Не может быть больше ${num} букв"
+    ],
+    "minLength": [
+      "Must be ${num} characters or more",
+      "Не может быть короче ${num} букв"
+    ],
+    "number": [
+      "Must be a number",
+      "Только число"
+    ],
+    "minValue": [
+      "Must be at least ${num}",
+      "Не может быть меньше ${num}"
+    ],
+    "email": [
+      "Invalid email address",
+      "Неверный email"
+    ],
+    "tooOld": [
+      "You might be too old for this",
+      "Великий возраст"
+    ],
+    "userName": [
+      "Bad symbols",
+      "Недопустимые символы"
+    ]
+  },
+  "search": {
+    "placeholder": [
+      "Search by...",
+      "найти..."
+    ]
+  },
+  "form": {
+    "submit": [
+      "Submit",
+      "Сохранить"
+    ],
+    "clear": [
+      "Clear",
+      "Очистить"
+    ],
+    "close": [
+      "Close window",
+      "Закрыть окно"
+    ],
+    "addUser": [
+      "New user",
+      "Новый пользователь"
+    ],
+    "editUser": [
+      "Edit user",
+      "Изменить пользователя"
+    ]
+  },
+  "btn": {
+    "yes": [
+      "Yes",
+      "Да"
+    ],
+    "no": [
+      "No",
+      "Нет"
+    ],
+    "msg": [
+      "ОК",
+      "ОК"
+    ]
+    ,
+    "delete": [
+      "delete",
+      "удалить"
+    ],
+    "cancel": [
+      "cancel",
+      "отменить"
+    ]
+  },
+  "dlg": {
+    "title": {
+      "CONFIRM_DELETE_USER": [
+        "delete this user?",
+        "удалить этого пользователя?"
+      ],
+      "MSG_USER_DELETE_OK": [
+        "user has bean deleted",
+        "пользователь удален"
+      ],
+      "MSG_USER_DELETE_ERR": [
+        "can not delete user",
+        "не удалось удалить пользователя"
+      ]
+    }
+  },
+  "hint": {
+    "closeWindow": [
+      "close the window",
+      "закрыть окно"
+    ],
+    "editUser": [
+      "edit this user...",
+      "редактировать этого пользователя..."
+    ],
+    "deleteUser": [
+      "delete this user...",
+      "удалить этого пользователя..."
+    ],
+    "addUser": [
+      "create new user...",
+      "добавить нового пользователя..."
+    ],
+    "searchUser": [
+      "search user...",
+      "найти пользователя..."
+    ],
+    "clearUserSearch": [
+      "clear search string",
+      "очистить строку поиска"
+    ],
+    "sortUsers": [
+      "sort by '${by}",
+      "сортировать по '${by}'"
+    ]
+  },
+  "msg":{
+    "success":{
+      "text":[
+        "success!!!",
+        "все прошло успешно"
+      ],
+      "title":[
+        "success",
+        "Успешно"
+      ]
+    },
+
+    "error":{
+      "text":[
+        "some error has been occured",
+        "возникли ошибки"
+      ],
+      "title":[
+        "error",
+        "ошибка"
+      ]
+    },
+
+
+    "userUpdateOk":{
+      "text":[
+        "user has been updated successfuly",
+        "пользователь ${email} успешно обновлен"
+      ],
+      "title":[
+        "Success",
+        "Успешно"
+      ]
+    },
+    "userUpdateErr":{
+      "text":[
+        "cannot update user",
+        "не удалось обновить пользователя"
+      ],
+      "title":[
+        "Error",
+        "Ошибка"
+      ]
+    },
+    "userDeleteOk":{
+      "text":[
+        "user has been updated successfuly",
+        "пользователь <b>${firstName} ${lastName}, e-mail:${email} [id=${id}] </b> <br/> был успешно удален"
+      ],
+      "title":[
+        "Success",
+        "пользователь <i>${firstName} ${lastName}</i> удален"
+      ]
+    },
+    "userDeleteErr":{
+      "text":[
+        "cannot update user",
+        "не удалось удалить пользователя"
+      ],
+      "title":[
+        "Error",
+        "Ошибка"
+      ]
+    }
+  }
+}
