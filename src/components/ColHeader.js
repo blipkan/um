@@ -24,7 +24,6 @@ export default class ColHeader extends Component {
     }
 
     render() {
-
         const isSorted = this.props.sort && (this.props.by === this.props.sort.by);
         const orderStr = (isSorted) ? this.props.sort.order : '';
         this.order = (isSorted) ? this.props.sort.order : SortOrder.ASC;
